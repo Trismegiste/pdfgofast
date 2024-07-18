@@ -11,6 +11,7 @@ RUN mkdir /pdf
 COPY ./go.mod /pdf/
 COPY ./go.sum /pdf/
 COPY ./main.go /pdf/
+COPY ./index.html /pdf/
 
 WORKDIR /pdf
 
