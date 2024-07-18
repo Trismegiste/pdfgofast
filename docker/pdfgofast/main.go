@@ -76,6 +76,8 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	defer file.Close()
 
+	fmt.Printf("mimetype: %s\n", fileHeader.Header.Get("Content-Type"))
+
 	pathname := fmt.Sprintf("/tmp/%d%s", time.Now().UnixNano(), filepath.Ext(fileHeader.Filename))
 	dst, err := os.Create(pathname)
 	if err != nil {
