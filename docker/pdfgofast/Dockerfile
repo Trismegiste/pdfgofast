@@ -15,3 +15,5 @@ COPY ./main.go /pdf/
 WORKDIR /pdf
 
 RUN go install
+
+ENTRYPOINT go run main.go
