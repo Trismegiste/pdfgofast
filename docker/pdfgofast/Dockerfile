@@ -17,4 +17,4 @@ WORKDIR /pdf
 
 RUN go install
 
-ENTRYPOINT go run main.go
+ENTRYPOINT go run main.go 4444
