@@ -5,10 +5,11 @@ A ready-copy-paste docker container to generate HTML-to-PDF with a microservice 
 This is a docker config to add to your project (and customize as you wish).
 
 ## Where
-Just copy-paste the ```docker``` directory into your project root and edit your ```docker-compose.yml``` by appending the content of the ```docker-compose.yml``` from this repo.
+Just copy-paste the ```docker``` directory into your project root and edit your ```docker-compose.yml``` by appending the content of the ```docker-compose.yml``` from this repository.
 
 ## How
 ![Stack](https://github.com/Trismegiste/pdfgofast/blob/master/stack.svg)
+
 This container is using the insanely-optimized ```chromedp/headless-shell``` image that provides a stack for ChromeDriver and Chromium. I've build a http server in Go on top of that.
 
 Calling this microservice is simple as posting a form.
@@ -30,5 +31,7 @@ I've tried many ways to generate PDF from HTML :
 Of course, this container is the best :) Anyway, it could be better, by using stream, adding https, better log...
 
 ## Who
-Everyone who need to generate PDF on the backend in a declarative language, therefore HTML/CSS. You can even add Javascript but I don't recommand it, it will be difficult to test and debug. I also recommand you data-url-base64-encode all pictures to prevent any network/DNS problem which can occur depending on your network stack config, and sometimes, Chromium does not wait till all pictures are fully loaded (this could happend when the html page includes many pictures)
+Everyone who need to generate PDF on the backend in a declarative language, therefore HTML/CSS. You can even add Javascript but I don't recommand it, it will be difficult to test and debug. 
+
+I also recommand you data-url-base64-encode all pictures to prevent any network/DNS problem which can occur depending on your network stack config, and sometimes, Chromium does not wait till all pictures are fully loaded (this could happend when the html page includes many pictures)
 
