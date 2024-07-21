@@ -2,7 +2,8 @@
 A ready-copy-paste docker container to generate HTML-to-PDF with a microservice calling chromium
 
 ## What
-This is a docker config to add to your project (and customize as you wish).
+This is a docker config to add to your project (and customize as you wish). It provides a way to 
+generate PDF from HTML by calling a headless Chromium through ChromeDriver.
 
 ## Where
 Just copy-paste the ```docker``` directory into your project root and edit your ```docker-compose.yml``` by appending the content of the ```docker-compose.yml``` from this repository.
