@@ -62,7 +62,7 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Here we go, prints the html uploaded file stored on filesystem into a PDF response with the chromedriver calling chromium
-	ctx, cancel := chromedp.NewContext(context.Background())
+	ctx, cancel := chromedp.NewContext(context.Background()) // @todo Could we reuse the same context for consecutive calls ?
 	defer cancel()
 
 	var buf []byte
